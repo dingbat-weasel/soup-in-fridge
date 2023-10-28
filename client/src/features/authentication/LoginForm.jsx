@@ -2,13 +2,15 @@ import { useState } from "react";
 import FormRowVertical from "../../components/FormRowVertical";
 import { useLogin } from "./useLogin";
 
+import Form from "../../components/Form";
+
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, isLoading } = useLogin();
 
   return (
-    <form className="overflow-hidden rounded-md border border-slate-100 bg-slate-50 px-16 py-10 text-2xl">
+    <Form>
       <FormRowVertical label="Email Address">
         <input
           className="rounded-sm border border-slate-300 bg-slate-50 px-5 py-3 shadow-sm"
@@ -32,7 +34,7 @@ function LoginForm() {
       <FormRowVertical>
         <button>{!isLoading ? "Log in" : "Loading..."}</button>
       </FormRowVertical>
-    </form>
+    </Form>
   );
 }
 
