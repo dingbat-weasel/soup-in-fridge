@@ -6,16 +6,16 @@ function Navbar() {
       <nav>
         <ul className="flex justify-end gap-6 px-8 py-4">
           <li className="mr-auto">
-            <Link>soup in fridge, love you</Link>
+            <Link to="/">soup in fridge, love you</Link>
           </li>
           <li>
-            <Link>Archive</Link>
+            <Link to="archive">Archive</Link>
           </li>
           <li>
-            <Link>About</Link>
+            <Link to="about">About</Link>
           </li>
           <li>
-            <Link>Contact</Link>
+            <Link to="contact">Contact</Link>
           </li>
         </ul>
       </nav>
