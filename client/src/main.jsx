@@ -8,10 +8,13 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import ErrorPage from "./routes/ErrorPage";
 import Root from "./routes/Root";
 import Login from "./routes/Login";
-import Write from "./routes/Write";
 import Register from "./routes/Register";
-import SinglePost from "./routes/SinglePost";
 import Home from "./routes/Home";
+import SinglePost from "./routes/SinglePost";
+import Write from "./routes/Write";
+import Archive from "./routes/Archive";
+import About from "./routes/About";
+import Contact from "./routes/Contact";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +24,21 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "archive",
+        element: <Archive />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "about",
+        element: <About />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
         errorElement: <ErrorPage />,
       },
       {
